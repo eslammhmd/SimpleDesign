@@ -1,0 +1,130 @@
+@import "./_helpers/global";
+header{
+    background-color:$basiccolor;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    box-shadow: $shadow;
+    padding: 1.5rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    .logo{
+    @include titletext(2.5rem);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    span{
+      @include titletext(3rem);
+        transform: translateX(30px);
+        color: $hovercolor;
+    }
+    }
+    }
+    .navbar{
+        a{
+            color: $lightcolor;
+            padding: 1rem 1rem;
+            margin: 0 2rem;
+            display: block;
+            @include graphtext(2rem);
+            &:hover{
+                color: $hovercolor;
+            }
+          }
+        }
+        .navbar ul li{
+            position: relative;
+            float: left;
+            &:hover > ul{
+                display: initial;
+            }
+
+        }
+        .navbar ul li ul{
+            position: absolute;
+            left: 0;
+            width: 200px;
+            background: $darkcolor;
+            display: none;
+        }
+        .navbar ul li ul li{
+            width: 100%;
+            border-top: 1px solid $basiccolor;
+            padding: 2rem 2rem;
+            cursor: pointer;
+            @include titletext(2rem);
+            &:hover{
+                color: $hovercolor;
+            }
+        }
+        .search{
+            position: absolute;
+            top: 200%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70rem;
+            background-color: #fff;
+            box-shadow: $shadow;
+            padding: 1rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            input{
+                width: 100%;
+                padding: 1.2rem 1.4rem;
+                background-color: #ccc;
+                font-size: 1.6rem;
+                color: $darkcolor;
+            }
+        
+        }
+        footer{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: $basiccolor;
+            color: #fff;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            right: 0;
+            p{
+                @include titletext(1.5rem);
+                padding: 1rem 1rem;
+                span{
+                    color: $hovercolor;
+                    font-size: 2rem;
+                }
+            }
+        }
+        @media (max-width:991px){
+            header{
+                padding: 20px;
+            }
+            .navbar{
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: $lightcolor;
+                color: black;
+                border-top: 1px solid gray;
+            }
+            .navbar ul li{
+                width: 100%;
+            }
+            .navbar ul li ul{
+                position: relative;
+                width: 100%;
+            }
+            .navbar ul li ul li{
+                background: $lightcolor;
+                color: black;
+            }
+        }

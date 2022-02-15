@@ -1,0 +1,150 @@
+/* start global*/
+* {
+  font-family: "poppins", "sans-serif";
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  text-transform: capitalize;
+  transition: all 0.4s linear;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: 7rem;
+  min-height: 100vh;
+  background: url("/img/pexels-karolina-grabowska-4814061.jpg");
+  background-position: center;
+  background-size: cover; }
+
+header {
+  background-color: #2D4263;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000; }
+  header .logo {
+    font-size: 2.5rem;
+    color: #F5F2E7;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly; }
+    header .logo span {
+      font-size: 3rem;
+      color: #F5F2E7;
+      text-transform: capitalize;
+      transform: translateX(30px);
+      color: #C84B31; }
+
+.navbar a {
+  color: #F5F2E7;
+  padding: 1rem 1rem;
+  margin: 0 2rem;
+  display: block;
+  font-size: 2rem;
+  color: #F5F2E7;
+  line-height: 1.5; }
+  .navbar a:hover {
+    color: #C84B31; }
+
+.navbar ul li {
+  position: relative;
+  float: left; }
+  .navbar ul li:hover > ul {
+    display: initial; }
+
+.navbar ul li ul {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  background: #2C3333;
+  display: none; }
+
+.navbar ul li ul li {
+  width: 100%;
+  border-top: 1px solid #2D4263;
+  padding: 2rem 2rem;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #F5F2E7;
+  text-transform: capitalize; }
+  .navbar ul li ul li:hover {
+    color: #C84B31; }
+
+.search {
+  position: absolute;
+  top: 200%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70rem;
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem; }
+  .search input {
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    background-color: #ccc;
+    font-size: 1.6rem;
+    color: #2C3333; }
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #2D4263;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0; }
+  footer p {
+    font-size: 1.5rem;
+    color: #F5F2E7;
+    text-transform: capitalize;
+    padding: 1rem 1rem; }
+    footer p span {
+      color: #C84B31;
+      font-size: 2rem; }
+
+@media (max-width: 991px) {
+  header {
+    padding: 20px; }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #F5F2E7;
+    color: black;
+    border-top: 1px solid gray; }
+
+  .navbar ul li {
+    width: 100%; }
+
+  .navbar ul li ul {
+    position: relative;
+    width: 100%; }
+
+  .navbar ul li ul li {
+    background: #F5F2E7;
+    color: black; } }
+
+/*# sourceMappingURL=main.css.map */
